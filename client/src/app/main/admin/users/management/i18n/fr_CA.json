@@ -1,0 +1,39 @@
+{
+    "title": "Gestion des utilisateurs",
+    "edit_template": "Modifier le template",
+    "new_user": "Nouveau utilisateur",
+    "edit_user": "Modifier l'utilisateur",
+    "user_details": "Détails d'utulisateur",
+    "description": "L'Utilisateur {{name}}",
+    "no_address": "Pas d'adresse",
+    "tempate_dialog_header": "Prix par défaut",
+    "items_of_template": "Items de template",
+    "items_of_template_placeholder": "Selectionner les items pour la division",
+    "order_of_template": "Ordre d'affichage des templates",
+    "drop_items_here": "Déposez un item ici",
+    "last_password_change" : "Changement de mot de pass",
+    "validation": {
+        "are_you_sure_you_want_to_delete_the_user": "Etes-vous sûr de vouloir supprimer l'utilisateur", 
+        "are_you_sure_you_want_to_delete_the_user_desc": "En supprimant l'utilisateur, vous ne pouvez plus revenir en arrière. Toutes ses données, dossiers, et autres éléments reliés à son compte seront supprimé à jamais."
+    },
+    "status": {
+        "active": "Actif",
+        "awaiting": "En attente de début d'amissiblité",
+        "expired": "Expiré",
+        "none": "Aucun"
+    },
+    "error": {
+        "create": "Erreur lors de la création de l'utilisateur",
+        "update": "Erreur lors de la mise à jour de l'utilisateur",
+        "delete": "Erreur lors de la suppression de l'utilisateur",
+        "please_enter_a_valid_name" : "veuillez entrer un nom valide",
+        "PASSWORD_NOT_OK": "Le mot de passe n'est pas bon.",
+        "EMAIL_ALREADY_IN_USE": "Le courriel entré est déjà associé à un autre compte.",
+        "UNKNOWN_ERROR" : "Error non definie."
+    },
+    "success": {
+        "create": "L'utilisateur {{name}} est crée avec succés",
+        "update": "L'utilisateur {{name}} est mise à jour avec succés",
+        "delete": "L'utilisateur est supprimé avec succés"
+    }
+}

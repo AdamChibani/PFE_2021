@@ -1,0 +1,303 @@
+{
+  "preference": {
+    "contract-type": "Type de contrat",
+    "status": "Statut",
+    "countries": "Pays",
+    "Looking": "Je suis à la recherche d'opportunités de carrière",
+    "Open": "Je ne cherche pas activement, mais je garde les yeux ouverts",
+    "Satisfied": "Je suis actuellement satisfait et je ne suis pas intéressé par les offres"
+  },
+  "country": {
+    "Any": "Tout",
+    "Tunisia": "Tunisie",
+    "Canada": "Canada",
+    "Africa": "Afrique",
+    "NorthAmerica":"Amérique du Nord",
+    "Italy": "Italie",
+    "Europe": "L'Europe"
+  },
+  "--": "--",
+  "welcome_to_portal": "Bienvenu au portail",
+  "myprofile": "Mon profil",
+  "administration": "Administration",
+  "detail": "Détail",
+  "detail_plural": "Détails",
+  "status": "Statut",
+  "active_users": "Utilisateurs actifs",
+  "start_date": "Date de début",
+  "end_date": "Date de fin",
+  "recurrence": "Récurrence",
+  "billing_moment": "Moment de facturation",
+  "price": "Prix",
+  "document": "Document",
+  "member": "Adhérent",
+  "member_plural": "Adhérents",
+  "commercial_package": "Forfait",
+  "commercial_package_plural": "Forfaits",
+  "business": "Client",
+  "business_plural": "Clients",
+  "client": "Client",
+  "client_plural": "Clients",
+  "order": "Commande",
+  "order_plural": "Commandes",
+  "invoice": "Facture",
+  "invoice_plural": "Factures",
+  "taxes_total": "Total des taxes",
+  "index_of_immovables": "Index aux immeubles",
+  "renew_policies": {
+    "reset": "Remise à zero",
+    "add": "Additioner"
+  },
+  "education": {
+     "specialty": "Spécialité",
+     "university": "Université",
+     "startDate": "Date de début",
+     "endDate": "Date de fin",
+     "BolognaProcess": "Processus de Bologne",
+     "US": "Processus américain",
+     "major": "Majeur",
+     "majorType": "Type de majeur",
+     "diploma": "Diplôme"
+  },
+  "recurrences": {
+    "daily": "Journalier",
+    "weekly": "Hebomadaire",
+    "monthly": "Mensuelle",
+    "yearly": "Annuelle",
+    "custom": "Personnalisé",
+    "none": "Aucune"
+  },
+
+  "district": "Circonscription",
+  "district_plural": "Circonscriptions",
+  "lot": "Lot",
+  "lot_plural": "Lots",
+
+  "billing_moment_type": {
+    "maxes": "Au début ou à la fin",
+    "start": "Au début",
+    "end": "A la fin",
+    "daily": "Journalier",
+    "weekly": "Hebomadaire",
+    "monthly": "Mensuelle",
+    "yearly": "Annuelle",
+    "custom": "Personnalisé",
+    "none": "Aucune"
+  },
+  "yes": "Oui",
+  "no": "Non",
+  "none": "Aucun",
+  "refresh": "Rafraîchir",
+  "reset": "Réinitialiser",
+  "login": "Se connecter",
+  "logout": "Se déconnecter",
+  "register": "S'inscrire",
+  "crop": "Recadrer",
+  "back": "Retour",
+  "save": "Enregistrer",
+  "save_exit": "Enregistrer et quitter",
+  "save_stay": "Enregistrer et rester",
+  "search": "Rechercher",
+  "search_for_anything": "Recherche strategique sur Nominis",
+  "example": "Exemple",
+  "create": "Créer",
+  "send": "Envoyer",
+  "download": "Telecharger",
+  "upload": "Mettre en ligne",
+  "close": "Fermer",
+  "loading": "Chargement...",
+  "actions": "Actions",
+  "profil": "",
+  "email": "Courriel",
+  "email_plural": "Courriels",
+  "cellphone": "Mobile",
+  "phone_number": "Numéro de téléphones",
+  "phone_number_plural": "Numéros de téléphones",
+  "holiday": "Congé",
+  "holiday_plural": "Congés",
+  "address": "Adresse",
+  "zip": "Code postal",
+  "city": "Ville",
+  "state": "Province",
+  "name": "Nom",
+  "option": "Option",
+  "option_plural": "Options",
+  "icon": "Icone",
+  "icon_plural": "Icones",
+  "archive": "Archiver",
+  "username": "Nom d'utilisateur",
+  "modify": "Modifier",
+  "next": "Suivant",
+  "crop_image": "Recadrer mon image",
+  "or": "ou",
+  "logo": {
+    "alt": "Logo de la société {{company}}"
+  },
+  "password": "Mot de passe",
+  "current_password": "Mot de passe actuel",
+  "old_password": "Ancienne mot de passe",
+  "new_password": "Nouveau mot de passe",
+  "confirm_password": "Confirmer mot de passe",
+  "edit_my_password": "Modifier mon mot de passe",
+  "no_data": "Aucune donnée disponible",
+  "no_data_body": "Peut-être revenir en arrière et essayer une nouvele fois, \nou contacter votre administrateur système",
+  "new_item": "Nouveau element",
+  "edit_create_form_caption": "Formulaire de création ou modification d'un élement",
+  "n": {
+    "factory": "Une usine",
+    "factory_plural": "{{count}} usines"
+  },
+
+  "administrationHome": {
+    "home_sub_title": "Administration et configuration de la plateforme"
+  },
+  "password_changed": {
+    "success": "Le mot de passe a été mis à jour avec succès"
+  },
+  "user": {
+    "first_name": "Prénom",
+    "last_name": "Nom",
+    "level": "Niveau",
+    "level_plural": "Niveau",
+    "role": "Role",
+    "role_plural": "Roles",
+    "active": "Actif",
+    "gender": "Sexe",
+    "birthday": "Date de naissance",
+    "account": "Utilisateur",
+    "Male": "Homme",
+    "Female": "Femme"
+  },
+  "developedby": "Développé par {{company}}",
+  "oups_error": "Uh oh.",
+  "unexpected_error_desc": "Quelque chose de bizarre est arrivé, restez calme et réessayez.",
+  "error_presist_desc": "Si l'erreur persiste veuillez contacter l'administration de la plateforme.",
+  "error": {
+    "crop": "Erreur lors du recadrage de l'image",
+    "access": "Vous n'avez pas les accès pour ces éléments de la plateforme.",
+    "generic": "Erreur lors du traitement de votre demande",
+    "session_expired": "Votre session est expirée, merci de se reconnecter",
+    "user_disabled": "Votre compte est désactivé.",
+    "upload": {
+      "image": "Erreur lors de la mise en ligne de la photo"
+    },
+    "update": {
+      "profil_picture": "Erreur lors de la mise à jour de votre photo"
+    },
+    "server": "Erreur de serveur",
+    "form": {
+      "required": "Ce champs est obligatoire",
+      "minLength": "{{N}} caractères au minimum",
+      "maxLength": "{{N}} caractères au maximum",
+      "passwordReq": "Doit être un mot de passe plus sécuritaire (au moins 1 lettre, 1 chiffre et 1 caractère spécial)",
+      "bad_password": "Mot de passe incorrect",
+      "wrong_passwords": "Un soucis avec votre mot de passe",
+      "passwordEquals": "Les mots passe ne sont pas les memes.",
+      "email": "Ce n'est pas un courriel valide",
+      "phone": "Numéro de téléphone invalide",
+      "isNumeric": "Ce n'est pas un numéro valide",
+      "value_not_supported": "Valeur entrée incorrecte"
+    },
+
+    "serverSide": {
+      "GRANT_ERROR": "Vous n'avez pas acces à cette partie",
+      "BAD_USER_PASSWORD": "Mot de passe incorrect",
+      "USER_DEACTIVATED": "Votre compte est désactivé",
+      "INTERNAL_SERVER_ERROR": "Erreur interne au server."
+    }
+  },
+  "success": {
+    "upload": {
+      "image": "Image envoyé au serveur avec succés"
+    },
+    "update": {
+      "generic": "",
+      "profil": "Votre profil est mise à jour avec succés.",
+      "profil_picture": "Votre photo est mise à jour.",
+      "password": "Votre mot de passe a été réinitialisé.",
+      "education": "Vos informations d'éducation ont été mises à jour avec succès"
+    }
+  },
+  "table": {
+    "n_selected": "1 element selectionné",
+    "n_selected_plural": "{{count}} selectionnés",
+    "rows_per_page": "Ligne par page",
+    "all": "Toutes",
+    "of": "de",
+    "more_than": "plus que {{count}}",
+    "actions_tooltips": {
+      "refetch": "Actualiser les données du serveur"
+    }
+  },
+  "button": {
+    "view_male": "Voir le {{element}}",
+    "view_female": "Voir la {{element}}",
+    "edit": "Modifier",
+    "edit_male": "Modifier le {{element}}",
+    "edit_female": "Modifier la {{element}}",
+    "delete_male": "Supprimer le {{element}}",
+    "delete_female": "Supprimer la {{element}}",
+    "remove_icon": "Supprimer l'image",
+    "remove_image": "Supprimer l'image",
+    "print_male": "Imprimer le {{element}}",
+    "print_female": "Imprimer la {{element}}",
+    "archive_male": "Archiver le {{element}}",
+    "archive_female": "Archiver la {{element}}",
+    "order": "Commander",
+    "pay": "Payer",
+    "retry": "Recommencez"
+  },
+  "profile_image": "Photo de profil",
+  "last_login": "Derniére connexion",
+  "i_confirm": "Je confirme",
+  "cancel": "Annuler",
+  "finish": "Finir",
+  "language": "Langue",
+  "commerical_package": "Paquet commercial",
+  "credit": "Crédit",
+  "credit_plural": "Crédits",
+  "renew_policy": "Politique de renouvellement",
+  "not_defined": "Non défini",
+  "edit": "Modifier",
+  "delete": "Supprimer",
+  "confirm": "Confirmer",
+  "confirm_delete": "Confirmer la suppréssion",
+  "confirm_delete_message": "Veillez confirmer la suppression du {{element}}: {{name}}",
+  "notice": {
+    "add_phone_notice": "Ajouter un numéro de téléphone",
+    "remove_phone_notice": "Supprimer ce numéro de téléphone",
+    "add_email_notice": "Ajouter un courriel",
+    "remove_email_notice": "Supprimer ce courriel"
+  },
+  "cellular": "Mobile",
+  "fax": "Fax",
+  "phone": "Mobile",
+  "tel": "Téléphone",
+  "ext": "Ext.",
+  "phone_number_label": "Numéro",
+  "documentation": "Documentation",
+  "add": "Ajouter un element",
+  "transferor": "Cédant",
+  "transferor_plural": "Cédants",
+  "buyer": "Acquéreur",
+  "buyer_plural": "Acquéreurs",
+  "text": "Texte",
+  "number": "Nombre",
+  "other": "Autre",
+  "existModal": {
+    "title": "Votre formulaire n'est pas enregistré !",
+    "content": "Vous n’avez pas enregistré vos modifications. En cliquant sur Quittez, vous allez perdre vos modifications, voulez-vous vraiment quitter ?",
+    "stay": "Restez",
+    "exit": "Quittez"
+  },
+  "deleteModal": {
+    "title": "Confirmer la suppréssion!",
+    "content": "Vous avez demandé de supprimé un element, en etes vous sur?",
+    "stay": "Restez",
+    "exit": "Quittez"
+  },
+  "print": {
+    "pdf": "Télécharger en PDF",
+    "excel": "Télécharger en Excel"
+  }
+}

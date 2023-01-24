@@ -1,0 +1,125 @@
+stages:
+  - build
+  - deploy
+#  - test
+
+#e2e_tests:
+#  image:
+#    name: testcafe/testcafe
+#    entrypoint: ["/bin/sh", "-c"]
+#  tags:
+#    - test
+#  stage: test
+#  script:
+#    - /opt/testcafe/docker/testcafe-docker.sh firefox:headless,chromium tests/**/*.js
+
+build-image:
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://dev.globetechnologie.net:2376/
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+  tags:
+    - build
+  stage: build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker build --no-cache --build-arg node=$CI_COMMIT_REF_SLUG -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+deploy-image:
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://dev.globetechnologie.net:2376/
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+  tags:
+    - deploy
+  stage: deploy
+  except:
+    - master
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker stop $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG || true
+    - docker rm $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG || true
+    - docker create --net bridge --name $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG 
+    - docker network connect localnetwork $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG
+    - docker update --restart=always $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG
+    - docker start $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG
+    - docker image prune -f
+    - docker restart apache-proxy
+  environment:
+    name: $CI_COMMIT_REF_SLUG
+    url: http://$CI_COMMIT_REF_SLUG-$CI_PROJECT_NAME.$CI_PROJECT_NAMESPACE.globetechnologie.net/
+    on_stop: clean-env
+
+clean-env:
+  tags:
+    - deploy
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+    DOCKER_HOST: tcp://dev.globetechnologie.net:2376/
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+  except:
+    - master
+  script:
+    - echo "Remove review app"
+    - docker stop $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG || true
+    - docker rm $CI_PROJECT_ID-$CI_COMMIT_REF_SLUG || true
+    - docker image prune -f
+  when: manual
+  environment:
+    name: $CI_COMMIT_REF_SLUG
+    action: stop
+    
+deploy-image-prod:
+  image: docker:latest
+  variables:
+    DOCKER_TLS_VERIFY: 1 
+    DOCKER_HOST: tcp://portainer.globetechnologie.com:2376/
+    DOCKER_DRIVER: overlay2
+    DOCKER_CERT_PATH: "/certs/dockergt"
+  tags:
+    - deploy-tls
+  stage: deploy
+  only:
+    - master
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker stop portail-nominis-frontend || true
+    - docker rm portail-nominis-frontend || true
+    - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+    - docker create --net bridge --name portail-nominis-frontend $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG 
+    - docker network connect localnetwork portail-nominis-frontend
+    - docker update --restart=always portail-nominis-frontend
+    - docker start portail-nominis-frontend
+    - docker image prune -f
+  environment:
+    name: production
+    url: https://portail.nominis.ca/
+    on_stop: clean-env-master
+
+clean-env-master:
+  tags:
+    - deploy-tls
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+    DOCKER_TLS_VERIFY: 1 
+    DOCKER_HOST: tcp://portainer.globetechnologie.com:2376/
+    DOCKER_DRIVER: overlay2
+    DOCKER_CERT_PATH: "/certs/dockergt"
+  only:
+    - master
+  script:
+    - echo "Remove review app"
+    - docker stop portail-nominis-frontend || true
+    - docker rm portail-nominis-frontend || true
+    - docker image prune -f
+  when: manual
+  environment:
+    name: production
+    action: stop
+

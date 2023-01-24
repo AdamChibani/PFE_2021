@@ -1,0 +1,29 @@
+{
+  "welcome_text": "Bienvenue dans le portail {{company}} !",
+  "signup": "S'inscrire",
+  "forgot_password_question": "Mot de passe oublié ?",
+  "back_to_login_page": "Retourner à la page de connexion",
+  "reset_password": "Réinitialiser le mot de passe",
+  "don_t_have_an_account_q": "Vous n'avez pas de compte ?",
+  "you_have_already_an_account": "Vous avez déjà un compte ?",
+  "create_an_account": "Demande un compte ici",
+  "error": {
+    "bad_email": "Votre couriel est erroné",
+    "bad_token": "Le token est invalid",
+    "unspecific": "Erreur inconnue."
+  },
+  "server_errors": {
+    "MAIL_SERVER_ERROR": "Erreur niveau server mail.",
+    "SERVER_ERROR": "Erreur niveau server.",
+    "NO_USER_FOUND": "Email incorrect.",
+    "token_expired": "Le token est est expiré, merci d'aller à la page Mot de passe oublié.",
+    "token_error": "Le token est est invalide. merci de réessayer la procédure.",
+    "email_already_exists": "Cette adresse email existe déjà.",
+    "password_is_not_secured": "Doit être un mot de passe plus sécuritaire (au moins 1 lettre, 1 chiffre et 1 caractère spécial)."
+  },
+  "success": {
+    "forgot_password_request": "Un couriel est envoyé à votre adresse email avec les étapes à suivre pour réinitialiser votre mot de passe",
+    "reset_password": "Votre mot de passe a été réinitialisé, vous serez redirigé à la page de connexion.",
+    "signup": "Votre inscription est faite en succès, un de nos chargés clients vous contactera."
+  }
+}

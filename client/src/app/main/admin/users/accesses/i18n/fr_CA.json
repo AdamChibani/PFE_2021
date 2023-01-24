@@ -1,0 +1,11 @@
+{
+  "title": "Roles et accées",
+  "see": "Voir",
+  "see_own": "Voir (miens)",
+  "access": "Accèe",
+  "access_plural": "Accèes",
+  "add_role": "Ajouter un role",
+  "role_name": "Nom du role",
+  "create_new_role": "Créer un nouveau role",
+  "accesses_description": "List des acces et privilèges des utilisateurs du role selectionné"
+}

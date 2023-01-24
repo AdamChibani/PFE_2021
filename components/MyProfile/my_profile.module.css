@@ -1,0 +1,23 @@
+.edit:hover {
+  color: #00b074;
+}
+.add:hover {
+  background-color: #43a047 !important;
+}
+.add {
+  background-color: #00b074 !important;
+}
+.ad {
+  color: white;
+}
+.msg:hover {
+  color: #00b074 !important;
+}
+.b {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.gr {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}

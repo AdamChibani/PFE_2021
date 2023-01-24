@@ -1,0 +1,23 @@
+/* html,
+body,
+#root {
+  height: 100%;
+}
+.App {
+  display: flex;
+  height: 100%;
+  flex-direction: column-reverse;
+} */
+.right {
+  justify-content: flex-end !important;
+}
+.left {
+  justify-content: flex-start !important;
+}
+.messageContainer {
+  width: 100%;
+  word-break: break-word;
+}
+.b {
+  background-color: rgba(255, 255, 255, 0.6);
+}
