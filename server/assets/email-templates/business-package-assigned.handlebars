@@ -1,0 +1,37 @@
+{{> header }}
+<span class="preheader">Félicitation, vous êtes inscrit au forfait « {{name}} »</span>
+<h1>{{{greetingByGender ""}}}</h1>
+<h2>Félicitation, vous êtes inscrit au forfait « {{name}} »</h2>
+<p>{{company}}, et ses comptes utilisateurs sont inscrits au forfait « {{name}} ».<br />
+  Avec le forfait « {{name}} » et la nouvelle technologie de la plateforme Nominis, vous avez un accès aux données
+  immobilier comme jamais avant.</p>
+<p>Le forfait vous donne accès aux modules</p>
+<table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    {{#each packages}}
+    <tr>
+      <td align="left">
+        <strong>{{{translate name}}}</strong>
+        <p>{{{translate description}}}</p>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<p>Connectez-vous dès maintenant sur la plateforme Nominis :</p>
+<table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+  <tr>
+    <td align="center">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+        <tr>
+          <td align="center">
+            <a href="{{link}}" class="f-fallback button" target="_blank">Plateforme Nominis</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<p>Si vous pensez que c’est un email erroné, veillez contacter le support commercial sur support@nominis.ca si vous avez
+des questions.</p>
+{{> footer }}

@@ -1,0 +1,34 @@
+module.exports.getMyBusiness = async function (user, requestedFields) {
+  // Handle main attributes
+  const attributes = new Set();
+  for (const field in requestedFields) {
+    if (Business.rawAttributes[field]) attributes.add(field);
+  }
+  // Handle include
+  const include = graphqlHelper.getIncludesFields(requestedFields);
+
+  const ids = await BusinessUser.findOne({
+    where: {
+      user_id: user.id,
+    },
+  });
+  const myBusiness = await Business.findOne({
+    attributes: Array.from(attributes),
+
+    where: {
+      id: ids.businessId,
+    },
+    include,
+  });
+  return myBusiness;
+};
+
+
+async myBusiness(_, args, context, information) {
+      const { user } = context;
+      const attributes = requestedFields(information);
+
+      const business = await helpers.getMyBusiness(user, attributes);
+      if (business) return business;
+      return null;
+    },
